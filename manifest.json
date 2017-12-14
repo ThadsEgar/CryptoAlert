@@ -1,0 +1,16 @@
+//Tells user about the extension
+{
+		"name": "CryptoAlert",
+		"version": "1.0",
+		"manifest_version": 2,
+		"description": "Alerts the user when cryptocurrency of their choice meets a certain threshold.",
+		
+		"browser_action":{
+			"default_icon": "icon.png",
+			"default_popup": "popup.html"
+		},
+
+		"permissions":[
+			"storage"
+		]
+}
