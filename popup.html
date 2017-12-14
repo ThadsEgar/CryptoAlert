@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>CryptoAlert</title>
+		<!--<script src="jquery-3.2.1.min.js"></script>-->
+	</head>
+
+
+
+
 	<body>
 		<h1>CryptoAlert</h1>
 
@@ -13,20 +21,24 @@
 		</select>
 
 		<!-- FORMAT
-			TITLE
+			TITLE 
+			Number
 			Input Text
 			Button
 		-->
 		<div>
-		<h2 title="Set alert on when currency reaches high">Set High</h2>
+		<h2 title="Set alert on when currency reaches high">Set High:</h2>
+		<h2  title="Set amount for high" id="highAmountN">0</h2>
 		<input type="text" id="highAmount"/>
-		<input type="submit" id="highAmountB"/>
+		<button type="button" id="highAmountB"/>Submit</button>
+		<script src="content.js"></script>
 		</div>
 
 		<div>
 		<h2 title="Set alert on when currency reaches low">Set Low</h2>
+		<h2 title="Set amount for low" id ="lowAmountN">0</h2>
 		<input type="text" id="lowAmount"/>
-		<input type="submit" id="lowAmountB"/>
+		<button type="button" id="lowAmountB"/>Submit</Button>
 		</div>
 
 		<!--CheckBox Allow Popup-->
@@ -35,6 +47,8 @@
 		<label for="allowPopup">Allow popup notifications?</label>
 		</div>
 
+		<!--JavaScript-->
+		<script src=content.js></script>
 
 
 	</body>
