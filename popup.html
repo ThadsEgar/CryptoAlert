@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>CryptoAlert</title>
+		<script src="jquery-3.2.1.min.js"></script>
+	</head>
+
 	<body>
 		<h1>CryptoAlert</h1>
 
 		<!--Dropdown-->
-		<select>
+		<select name="currency" id="currency">
 			<option value="bitCoin">BitCoin</option>
-			<option value="etherium">Etherium</option>
-			<option value="bitCoinCash">Bitcoin Cash</option>
-			<option value="Ripple">Ripple</option>
-			<option value="LiteCoin">LiteCoin</option>
+			<option value="ethereum">Ethereum</option>
+			<option value="bitcoin-cash">Bitcoin Cash</option>
+			<option value="ripple">Ripple</option>
+			<option value="litecoin">LiteCoin</option>
 		</select>
+		<h2 title="Current Price of selected Currency" id="amountC">Current: 0 USD</h2>
 
 		<!-- FORMAT
-			TITLE
+			TITLE 
+			Number
 			Input Text
 			Button
 		-->
-		<div>
-		<h2 title="Set alert on when currency reaches high">Set High</h2>
-		<input type="text" id="highAmount"/>
-		<input type="submit" id="highAmountB"/>
-		</div>
+		
+		<h2>Alert when:</h2>
+		<select name="aboveOrBelow" id="aboveOrBelow">
+			<option value="above">Above</option>
+			<option value="below">Below</option>
+		</select>
+		<h2  title="Threshold in USD" id="amountN">0 USD</h2>
+		<hr />
 
-		<div>
-		<h2 title="Set alert on when currency reaches low">Set Low</h2>
-		<input type="text" id="lowAmount"/>
-		<input type="submit" id="lowAmountB"/>
-		</div>
+		<input type="text" id="inputAmount" />
+		<button type="button" id="inputAmountB"/>Change Value</button>
+	
 
 		<!--CheckBox Allow Popup-->
 		<div>
@@ -35,11 +43,9 @@
 		<label for="allowPopup">Allow popup notifications?</label>
 		</div>
 
+		<!--JavaScript-->
+		<script src=content.js></script>
 
 
 	</body>
-
-
-
-	
 </html>
