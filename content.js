@@ -9,6 +9,33 @@ var coinWebsite;
 var urlBase = "https://api.coinmarketcap.com/v1/ticker/";
 var urlCoin;
 
+//Chrome storage set
+function setStorage(){
+	//store all var
+	chrome.storage.local.set("inputAmount":inputAmount);
+	chrome.storage.local.set("currency":currency);
+	chrome.storage.local.set("aboveOrBelow":aboveOrBelow);
+	chrome.storage.local.set("coinData":coinData);
+	chrome.storage.local.set("urlBase":urlBase);
+	chrome.storage.local.set("urlCoin":urlCoin);
+}
+//Chrome storage get
+function getStorage(){
+	chrome.storage.local.get("inputAmount", function(result)
+	{
+		inputAmount = result.inputAmount;
+	});
+	chrome.storage.local.get("currency", function(result)
+	{
+		currency = result.currency;
+	});
+	chrome.storage.local.
+
+}
+
+
+
+
 
 //button
 $(document).ready(function(){
@@ -29,10 +56,6 @@ $(document).ready(function(){
 			url: urlCoin,
 			success: success
 		});
-
-		
-
-
 	});
 });
 
